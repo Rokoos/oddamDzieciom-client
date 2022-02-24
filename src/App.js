@@ -5,6 +5,7 @@ import 'react-toastify/dist/ReactToastify.css'
 import { useDispatch } from 'react-redux'
 import { currentUser } from './functions/auth'
 import { loggedIn} from './actions'
+
 import AdminRoute from './components/Routes/AdminRoute'
 import AdminProducts from './pages/admin/AdminProducts'
 import AdminUsers from './pages/admin/AdminUsers'
@@ -12,8 +13,6 @@ import AdminUsers from './pages/admin/AdminUsers'
 import Navbar from './components/Nav/Nav'
 import Login from './pages/auth/Login'
 import Signup from './pages/auth/Signup'
-
-
 
 import UserRoute from'./components/Routes/UserRoute'
 
@@ -29,37 +28,11 @@ const App = () => {
 
   const dispatch = useDispatch()
 
-
-
-
-  // const checkLogin =  () => {
-  //   console.log('isfdsfdsfdsf', isAuthenticated())
-  //   if(isAuthenticated()) {
-  //     const token = JSON.parse(localStorage.getItem('userTkn'))
-  //     const userEmail = JSON.parse(localStorage.getItem('userEmail'))
-  //     // console.log(token, userEmail)
-  //     currentUser(userEmail ,token)
-  //   .then(res => {
-  //     console.log('data App.js', res.data)
-  //     dispatch(loggedIn(
-  //       res.data.email || '',
-  //       token,
-  //       res.data.role, 
-  //       res.data._id
-  //     ))
-  //   })
-  //   .catch(err => console.log(err))
-  //   }
-  // }
- 
   useEffect(() => {
       const token = JSON.parse(localStorage.getItem('userTkn'))
-      // console.log(token, userEmail)
       if(token){
         currentUser(token)
         .then(res => {
-      // console.log('data App.js', res.data)
-      // console.log('cookie', res)
       dispatch(loggedIn(
         res.data.name,
         res.data.email || '',
@@ -70,7 +43,6 @@ const App = () => {
       ))
     })
     .catch(err => {
-      console.log('taki se błand')
       console.log(err)})
       }
   
@@ -80,7 +52,6 @@ const App = () => {
       <Navbar/>
       <ToastContainer/>
         <Switch>
-          
           <Route exact path="/" component={Products} />
           <UserRoute exact path="/product/create" component={ProductCreate} />
           <UserRoute exact path="/product/edit/:id" component={UpdateProduct} />
@@ -98,9 +69,4 @@ const App = () => {
 
 export default App
 
-/*
- marcin.widomski83@gmail.com
- m.widomski@tlen.pl
- 123456
-  */
 

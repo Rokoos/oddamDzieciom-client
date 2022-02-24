@@ -1,3 +1,4 @@
 node_modules
 .env
 .eslintcache
+REACT_APP_API2='https://oddamdzieciom.herokuapp.com/api'

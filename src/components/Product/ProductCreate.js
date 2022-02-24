@@ -1,5 +1,4 @@
 import React, {useState, Fragment} from 'react'
-// import ProductCreateForm from '../../../components/ProductCreateForm'
 import {toast} from 'react-toastify'
 import { useSelector} from 'react-redux'
 import {createProduct} from '../../functions/product'
@@ -49,7 +48,6 @@ const ProductCreate = ({history}) => {
           })
           })
           .catch(err => {
-            // setLoading(false)
             console.log(err)
           })
         },
@@ -65,7 +63,6 @@ const ProductCreate = ({history}) => {
             toast.success('Dodano produkt!')
           })
           .catch(err => {
-            // setLoading(false)
             console.log(err)
           })
 

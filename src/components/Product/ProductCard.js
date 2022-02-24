@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link} from 'react-router-dom'
 import { Card } from 'antd';
-import defaultPicture from '../../images/kids.png'
+import defaultPicture from '../../images/ImageNameHere(1).jpg'
 
 const { Meta } = Card
 

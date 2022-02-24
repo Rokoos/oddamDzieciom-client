@@ -11,7 +11,7 @@ const checkIndex = (index) => index === 0 ? num : num = num + 10
   return (
     
     
-    <div className="estrellas inverso" style={{ width: '100%' }}>
+    <div className="estrellas inverso" style={{width:'100vh'}} >
     {
       characters.map((char, index) => {
         checkIndex(index)

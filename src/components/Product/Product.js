@@ -2,7 +2,7 @@ import React from 'react'
 import { Link} from 'react-router-dom'
 import { useSelector} from 'react-redux'
 import ModalImage from 'react-modal-image'
-import defaultPicture from '../../images/kids.png'
+import defaultPicture from '../../images/ImageNameHere(1).jpg'
 
 const Product = ({product}) => {
   const user = useSelector(state => state.user)

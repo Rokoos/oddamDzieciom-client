@@ -8,7 +8,6 @@ const FileUploader = ({
   setPhoto
 }) => {
 
-  // console.log('image', values.image)
 
   const user = useSelector(state => state.user)
 
@@ -21,10 +20,8 @@ const handleImageRemove = (public_id) => {
   })
   .then(res => {
     setValues({...values, image:''})
-    // functionThatResetsTheFileInput()
   })
   .catch(err => {
-    // setLoading(false)
     console.log(err)
   })
 }

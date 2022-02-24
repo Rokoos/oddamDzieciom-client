@@ -11,6 +11,7 @@ const Ul = styled.ul`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  background-color: orange;
   width: 100%;
     li {
       padding: 1rem 2rem;
@@ -24,7 +25,7 @@ const Ul = styled.ul`
   @media (max-width: 768px) {
     padding-top: 3rem;
     padding-bottom: 1.5rem;
-    background-color: #fff;
+    background-color: orange;
     position: fixed;
     flex-direction: column;
     align-items: start;
@@ -133,13 +134,6 @@ const RightNav = ({ open, toggle, history }) => {
   return (
     <Ul open={open}>
        <div className="nav_link">
-          {/* <li
-          onClick={toggleNavBar}
-          className={isActive(history, "/")}
-          >
-            <Link
-            to="/">Home</Link>
-          </li> */}
 
           <li 
         className={isActive(history, user && user.role === 'admin'? '/admin-products' : '/')}

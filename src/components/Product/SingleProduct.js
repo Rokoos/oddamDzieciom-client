@@ -9,7 +9,7 @@ import {
 import {sendEmail } from '../../functions/user'
 import Spinner from '../Spinner'
 import ModalImage from 'react-modal-image'
-import defaultPicture from '../../images/kids.png'
+import defaultPicture from '../../images/ImageNameHere(1).jpg'
 import { removeProductPhoto} from '../../functions/cloudinary'
 import {toast} from 'react-toastify'
 import { renderSexName} from '../../utils'
@@ -30,34 +30,21 @@ const SingleProduct = ({match, history}) => {
     const [loading, setLoading] = useState(false)
     const [message, setMessage] = useState('')
     const [messageSort, setMessageSort] = useState('')
-    // console.log('messageeeeeeeeeee', message)
     const [messageModal, setMessageModal] = useState(false)
     const [modalVisible, setModalVisible] = useState(false)
     const handleModal = () => setModalVisible(true)
 
-  
-
- 
-
     const productId = match.params.id
-    // console.log('history', history)
     const user = useSelector(state => state.user)
-    // console.log('productId', productId)
-    // console.log('user', user)
-    // console.log('owner', owner)
 
 
    
-// console.log('match', match)
-    // console.log('product', product)
-    // console.log('uzytkownik', product.postedBy.name)
-    // console.log('modal', modalVisible)
+
 
   const loadSingleProduct = useCallback(() => {
       setLoading(true)
       getProduct(productId)
       .then(res => {
-        // console.log('data======>',res.data)
           setProduct(res.data)
           setOwner(res.data.postedBy)
           setLoading(false)
@@ -84,7 +71,7 @@ const handleEmail = () => {
     ownerEmail: owner.email,
     messageSort,
     message, 
-    link: `http://localhost:3000${match.url}`
+    link: `https://oddamdzieciom.netlify.app/${match.url}`
   }
 
   sendEmail(user.token, messageData)
@@ -171,7 +158,7 @@ const deleteByUser = () => {
               <Link to={`/product/edit/${productId}`} className="btn btn-raised btn-primary">Edytuj produkt</Link>
               <div
               onClick={handleModal}
-              className="btn btn-raised btn-danger">Usuń produkt</div>
+              className="btn btn-raised btn-danger mt-3">Usuń produkt</div>
               </div>
             )}
 
@@ -222,6 +209,7 @@ const deleteByUser = () => {
       <Fragment>
     {renderProductInfo(product)} 
     {renderModalType()}
+    <div style={{height: '50px'}}></div>
   </Fragment>
     )
      

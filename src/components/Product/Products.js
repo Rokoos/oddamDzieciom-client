@@ -2,10 +2,8 @@ import React, {useState, useEffect, useCallback, Fragment} from 'react'
 import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
 import {
-  // getProducts,
   getProductsCount, 
   filterProducts
-  // getProductsByCount
 } from '../../functions/product'
 import ProductCard from './ProductCard'
 import Spinner from '../Spinner'
@@ -36,78 +34,25 @@ const Products = () => {
 
   const itemsOnPage = 10
 
-  // const [products, setProducts] = useState([])
   const [filteredItems, setFilteredItems] = useState([])
-  // console.log('filteredItems', filteredItems)
 
   const [loading, setLoading] = useState(false)
   const [productsCount, setProductsCount] = useState(0)
-  // console.log('productsCount', productsCount)
   const [page, setPage] = useState(1)
 
   const [categoryNames, setCategoryNames] = useState([])
-  // console.log('categoryNames', categoryNames)
 
   const [locationNames, setLocationNames] = useState([])
-  // console.log('locationNames', locationNames)
 
   const [shoeSizesValues, setShoeSizesValues] = useState([])
-// console.log('shoeSizesValues', shoeSizesValues)
 
   const [clothesSizesValues, setClothesSizesValues] = useState([])
-// console.log('ubrania', clothesSizesValues)
 
-const [sexNames, setSexNames] = useState([])
-// console.log('płeć', sexNames)
-
-
+  const [sexNames, setSexNames] = useState([])
   const [modalVisible, setModalVisible] = useState(false)
   const handleModal = () => setModalVisible(true)
 
   
-
-    // console.log('modalVisible', modalVisible)
-  
-  // console.log('products', products)
-
-  // const fetchProducts = useCallback(() => {
-  //   setLoading(true)
-  //   getProducts('createdAt','desc', page, 4)
-  //   .then(res => {
-  //     // console.log('products', res.data)
-  //     setProducts(res.data)
-  //     setLoading(false)
-  //   })
-  // }, [page])
-
-
-  //////////////////
-
-  // const jajco = {
-  //   dudu: [],
-  //   dada: [],
-  //   dede: ['Wawa', 'Katowice'],
-  //   dodo: ['orange'],
-  // }
-
-  // let heniek = {}
-
-  // for(let sth in jajco){
-  //   if(jajco[sth].length > 0){
-  //     heniek[sth] = jajco[sth]
-  //   }
-  // }
-
-  // console.log('heniek', heniek)
-
-  
-
-  ///////////////
-
-  // useEffect(() =>{
-  //     fetchProducts()
-  // }, [page, fetchProducts])
-
   useEffect(() => {
     getProductsCount({
       category: categoryNames,
@@ -136,7 +81,6 @@ const [sexNames, setSexNames] = useState([])
     .then(res => {
       setFilteredItems(res.data)
       setLoading(false)
-      // console.log('res.data', res.data)
       
     })
     
@@ -225,7 +169,6 @@ const [sexNames, setSexNames] = useState([])
       setCategoryNames(inTheState)
       
   }  
-  // console.log('rozmiary', shoeSizes())
 
 //lokalizacje
 
@@ -340,36 +283,31 @@ const [sexNames, setSexNames] = useState([])
 //// reset filters
 
   const resetFilters = () => {
-    // console.log('tadam!!')
     setCategoryNames([])
     setLocationNames([])
     setShoeSizesValues([])
     setClothesSizesValues([])
     setSexNames([])
-    // setPage(1)
     dispatch(clearFilters())
     dispatch(setPageNum(1))
   }
 
-  // const items = categoryNames.length === 0 && locationNames.length === 0 ? products : filteredItems
 
   const renderProducts = () => (
       <Fragment>
-        <div className=" col-md-12 mt-5">
+       
           <div className="row">
           {
             filteredItems.map(product => (
                 <div
-                 className="col-md-6 col-lg-6 col-xl-4 d-flex align-items-stretch"
+                 className=" col-md-6 col-lg-6 col-xl-4 d-flex align-items-stretch"
                   key={product._id}>
                   <ProductCard  product={product}/>
                 </div>
             ))
           }
-          
           </div>
           
-        </div>
           {
             productsCount > itemsOnPage && (
               <div className="text-center mt-4">
@@ -390,8 +328,7 @@ const [sexNames, setSexNames] = useState([])
   )
   return (
     <Fragment>
-    <div className="container-fluid mt-3">
-      <div className="text-center">
+    <div className="container-fluid mt-3 text-center" style={{width: '100vh'}}>
         <button
             onClick={() => {
               handleModal()
@@ -401,8 +338,7 @@ const [sexNames, setSexNames] = useState([])
             style={{fontSize:"10px"}}
             className="btn btn-raised btn-primary button-display mt-3 mb-5">
             Filtry
-        </button>
-        </div>   
+        </button> 
     {loading ? <Spinner /> : (
       !filteredItems.length ? <h4>Nie znaleziono produktów</h4> :renderProducts()
     ) }
@@ -476,17 +412,3 @@ const [sexNames, setSexNames] = useState([])
 }
 
 export default Products
-/* {
-  <div key={p._id} >
-              <div  className="d-flex justify-content-between p-2 mb-2"  >
-                <span >{p.title}</span>
-                <span>{p.description.substring(0, 50)}...</span>
-                <span>{p.postedBy.location}</span>
-                
-            </div>
-            <div className="text-center">
-            <Link to={`/product/${p._id}`} className="btn btn-raised btn-success">Więcej &rarr;</Link>
-            <hr/>
-            </div>
-          </div>
-} */

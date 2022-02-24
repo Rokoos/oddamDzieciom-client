@@ -14,11 +14,9 @@ const UpdateProduct = ({match, history}) => {
   const [loading, setLoading] = useState(false)
   const [values, setValues] = useState(initState)
   const [photo, setPhoto] = useState('')
-  // console.log('photo', photo)
   
 
   const {id} = match.params
-  // console.log('id qrwa', id)
 
   const user = useSelector(state => state.user)
 
@@ -54,7 +52,7 @@ const handleSubmit =e => {
       updateProduct(id,{...values, image: res.data}, user.token)
       .then(response => {
       toast.success(`Edytowano ${response.data.title}!`)
-      history.push('/products')
+      history.push('/')
     })
     })
     .catch(err => {
@@ -68,15 +66,14 @@ const handleSubmit =e => {
   updateProduct(id, values, user.token)
   .then(res => {
     toast.success(`Edytowano ${res.data.title}!`)
-    history.push('/products')
+    history.push('/')
   })
   .catch(err => {
     console.log(err)
     toast.error(err.response.data.error)
   })
  }
-  // values.subs = arrayOfSubIds
-  // values.category = selectedCategory ? selectedCategory : values.category
+  
 
   
 }
