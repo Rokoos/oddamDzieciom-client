@@ -328,7 +328,7 @@ const Products = () => {
   )
   return (
     <Fragment>
-    <div className="container-fluid mt-3 text-center" style={{width: '100vh'}}>
+    <div className="container-fluid mt-3 text-center" >
         <button
             onClick={() => {
               handleModal()

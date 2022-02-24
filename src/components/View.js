@@ -11,21 +11,21 @@ const checkIndex = (index) => index === 0 ? num : num = num + 10
   return (
     
     
-    <div className="estrellas inverso" style={{width:'100vh'}} >
-    {
-      characters.map((char, index) => {
-        checkIndex(index)
-        return (
-          <span 
-          key={index}
-          style={{color:colors[index], transform:`rotate(${num}deg)`}}
-          >
-          {char}
-          </span>
-        )
-      })
-    }
- 
+   <div className="estrellas inverso bg-primary" >
+   {
+     characters.map((char, index) => {
+       checkIndex(index)
+       return (
+         <span 
+         key={index}
+         style={{color:colors[index], transform:`rotate(${num}deg)`}}
+         >
+         {char}
+         </span>
+       )
+     })
+   }
+
 </div>
 
 

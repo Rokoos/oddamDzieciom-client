@@ -1,6 +1,6 @@
 body {
-  /* background-color: #fff;
-  background-color: orange; */
+  /* background-color: #fff; */
+  background-color: orange;
 }
 .container {
   max-width: 1600px;
@@ -79,7 +79,7 @@ body {
 .estrellas {
   /* background-color: #0d91f2; */
   position: relative;
-  width: 520px;
+  width: 100vw;
   height: 300px;
   margin: 0 auto;
   /* font-size: 40px; */

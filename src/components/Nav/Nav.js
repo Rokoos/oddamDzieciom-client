@@ -19,7 +19,7 @@ const Navbar = () => {
       <Nav>
         <Burger />
       </Nav>
-      <View/>
+      
       </Fragment>  
   )
 }
