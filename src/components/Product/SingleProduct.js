@@ -51,7 +51,7 @@ const SingleProduct = ({match, history}) => {
       })
       .catch(err => {
         toast.error('Nie znaleziono produktu.')
-        history.push('/products')
+        history.push('/')
       })
   }, [productId, history]) 
 

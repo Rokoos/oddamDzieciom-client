@@ -30,7 +30,7 @@ const AdminProducts = () => {
   }, [])
 
   return (
-    <div className="container-fluid mt-5">
+    <div className="container-fluid" style={{marginTop:'100px'}}>
         <div className="row"> 
             
           <div className="col-md-12">

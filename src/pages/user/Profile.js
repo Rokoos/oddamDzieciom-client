@@ -79,7 +79,7 @@ const UserProfile = ({match, history}) => {
     })
     .catch(error => {
       toast.error(error.response.data.error)
-      history.push('/products')
+      history.push('/')
     })
 }, [userId, history]) 
 
