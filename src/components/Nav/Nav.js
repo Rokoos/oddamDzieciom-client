@@ -1,7 +1,9 @@
 import React, {Fragment} from 'react';
+import {Link } from 'react-router-dom'
 import styled from 'styled-components';
 import Burger from './Burger';
 import View from '../View'
+import {colors} from '../../utils'
 const Nav = styled.nav`
   width: 100%;
   height: 55px;
@@ -14,12 +16,29 @@ const Nav = styled.nav`
 `
 
 const Navbar = () => {
+
+  const text = 'oddamDzieciom'
+const characters = text.split('');
   return ( 
     <Fragment>
-      <Nav>
+      <Nav className="leniczka">
+      <Link to="/" className="oddamDzieciom">
+        {
+          characters.map((char, index) => {
+            return (
+              <span 
+              key={index}
+              style={{color:colors[index], fontSize:'18px'}}
+              >
+              {char}
+              </span>
+            )
+          })
+        }
+        </Link>
         <Burger />
       </Nav>
-      
+      <View />
       </Fragment>  
   )
 }

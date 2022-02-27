@@ -126,8 +126,8 @@ const renderProfileData = () => (
 )
 
   return (
-    <div className="container">
-    {user && <h2 className="mt-5 mb-5">Profil użytkownika</h2>}
+    <div className="container" style={{marginTop:'100px'}}>
+    {user && <h4 className="mt-5 mb-5 ">Profil użytkownika</h4>}
     
       {loading ? <Spinner/> : 
         (
@@ -150,7 +150,7 @@ const renderProfileData = () => (
     {
       products.length === 0 ? (<h4>{userData.name} dodał 0 produktów</h4>) : (
         <Fragment>
-        <h2 className="mb-5 mt-5">Produkty użytkownika "<i>{userData.name}</i>"</h2>
+        <h4 className="mb-5 mt-5">Produkty użytkownika "<i>{userData.name}</i>"</h4>
          <div className="posts_container">
             {products.map(p => <Product  product={p}  key={p._id} />)}  
         </div>

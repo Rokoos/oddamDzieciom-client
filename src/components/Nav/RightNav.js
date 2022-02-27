@@ -5,14 +5,16 @@ import { useDispatch, useSelector } from 'react-redux'
 import styled from 'styled-components';
 import { getToken, logout} from '../../utils'
 
+
+
 const Ul = styled.ul`
   list-style: none;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: orange;
   width: 100%;
+  margin-top: 20px;
     li {
       padding: 1rem 2rem;
       align-items: center;
@@ -23,9 +25,10 @@ const Ul = styled.ul`
     }
   
   @media (max-width: 768px) {
+    margin-top: 0px;
     padding-top: 3rem;
     padding-bottom: 1.5rem;
-    background-color: orange;
+    background-color: #fff;
     position: fixed;
     flex-direction: column;
     align-items: start;
@@ -134,7 +137,7 @@ const RightNav = ({ open, toggle, history }) => {
   return (
     <Ul open={open}>
        <div className="nav_link">
-
+        
           <li 
         className={isActive(history, user && user.role === 'admin'? '/admin-products' : '/')}
         onClick={toggleNavBar}

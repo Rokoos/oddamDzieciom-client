@@ -11,7 +11,8 @@ const checkIndex = (index) => index === 0 ? num : num = num + 10
   return (
     
     
-   <div className="estrellas inverso bg-primary" >
+   <div className="showView">
+   <div className="estrellas inverso" >
    {
      characters.map((char, index) => {
        checkIndex(index)
@@ -27,6 +28,7 @@ const checkIndex = (index) => index === 0 ? num : num = num + 10
    }
 
 </div>
+   </div>
 
 
   )

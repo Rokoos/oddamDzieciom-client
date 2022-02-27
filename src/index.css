@@ -1,12 +1,22 @@
 body {
   /* background-color: #fff; */
-  background-color: orange;
+  /* background-color: orange; */
 }
 .container {
   max-width: 1600px;
 }
 
 /*/////////////////// Nav ///////////////////*/
+
+.leniczka {
+  display: flex;
+  align-items: center;
+}
+
+.oddamDzieciom {
+  display: none;
+}
+
 .nav_active {
   /* background-color: rgba(255, 255, 255, 0.1); */
   background-color: #ddd;
@@ -24,6 +34,9 @@ body {
 }
 
 @media (max-width: 768px) {
+  .oddamDzieciom {
+    display: inline;
+  }
   .nav_active {
     align-self: start;
     height: 100%;
@@ -76,6 +89,10 @@ body {
 
 /* ////////////////////////////  heading ////////////*/
 
+.showView {
+  display: none;
+}
+
 .estrellas {
   /* background-color: #0d91f2; */
   position: relative;
@@ -86,7 +103,7 @@ body {
   font-size: 25px;
 
   margin-top: -20px;
-  border-bottom: solid 1px #01ff70;
+
   /* background-color: #0d91f2; */
 }
 .estrellas span {
@@ -133,6 +150,13 @@ body {
   }
 }
 
+@media (min-width: 768px) {
+  .showView {
+    display: block;
+    border-bottom: solid 1px #01ff70;
+  }
+}
+
 /* ////////////////////// ADMIN /////////////// */
 
 .admin {
@@ -151,6 +175,10 @@ body {
 
 /* ////////////////  Product   ////////////////// */
 
+.singleProduct-margin {
+  margin-top: 150px;
+}
+
 .showProductTitle {
   display: none;
 }
@@ -159,6 +187,12 @@ body {
   .showProductTitle {
     display: block;
   }
+}
+
+/* /////////////////////  Profile ////////////////////// */
+
+.profile-font {
+  font-size: 16px;
 }
 
 /* ////////////Loader////////////////// */

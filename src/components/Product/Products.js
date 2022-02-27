@@ -336,7 +336,7 @@ const Products = () => {
               dispatch(setPageNum(1))
             }}
             style={{fontSize:"10px"}}
-            className="btn btn-raised btn-primary button-display mt-3 mb-5">
+            className="btn btn-raised btn-primary button-display mt-5 mb-5">
             Filtry
         </button> 
     {loading ? <Spinner /> : (

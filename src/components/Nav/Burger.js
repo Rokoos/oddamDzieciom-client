@@ -1,6 +1,10 @@
 import React, { Fragment ,useState } from 'react';
+
 import styled from 'styled-components';
 import RightNav from './RightNav';
+
+
+
 
 const StyledBurger = styled.div`
   width: 2rem;
@@ -43,14 +47,16 @@ const Burger = () => {
   const toggle = () => setOpen(!open)
   
   
+  
   return (
     <Fragment>
-      <StyledBurger open={open} onClick={() => setOpen(!open)}>
-        <div />
-        <div />
-        <div />
-      </StyledBurger>
-      <RightNav open={open} toggle={toggle}/>
+     
+          <StyledBurger open={open} onClick={() => setOpen(!open)}>
+            <div />
+            <div />
+            <div />
+          </StyledBurger>
+          <RightNav open={open} toggle={toggle}/>
     </Fragment>
   )
 }

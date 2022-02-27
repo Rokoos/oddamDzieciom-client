@@ -122,7 +122,7 @@ const Signup = ({history}) => {
   )
 
   return (
-    <div className="container p-5">
+    <div className="container p-5 mt-3">
       <div className="row">
         <div
         

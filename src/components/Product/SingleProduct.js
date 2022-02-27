@@ -206,11 +206,11 @@ const deleteByUser = () => {
 
   return (
     loading ? <Spinner/> : (
-      <Fragment>
+      <div className="singleProduct-margin">
     {renderProductInfo(product)} 
     {renderModalType()}
     <div style={{height: '50px'}}></div>
-  </Fragment>
+  </div>
     )
      
   )

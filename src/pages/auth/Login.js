@@ -87,7 +87,7 @@ const Login = ({history}) => {
   )
 
   return (
-    <div className="container p-5">
+    <div className="container p-5 mt-5">
       <div className="row">
         <div className="col-md-6 offset-md-3 mt-5">
           {loading ? <Spinner/> :(
