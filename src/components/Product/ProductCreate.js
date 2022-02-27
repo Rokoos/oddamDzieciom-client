@@ -71,7 +71,7 @@ const ProductCreate = ({history}) => {
 
   
   return (
-    <div className="container mt-5 ">
+    <div className="container" style={{marginTop:'150px'}}>
       <div className="row">
         <div className="col-md-10 mx-auto">
           {

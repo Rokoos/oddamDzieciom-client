@@ -148,7 +148,7 @@ const renderProfileData = () => (
   <div className="row mb-5">
     <div className="col md-12">
     {
-      products.length === 0 ? (<h4>{userData.name} dodał 0 produktów</h4>) : (
+      products.length === 0 ? (<h4 className="mt-4">{userData.name} dodał 0 produktów</h4>) : (
         <Fragment>
         <h4 className="mb-5 mt-5">Produkty użytkownika "<i>{userData.name}</i>"</h4>
          <div className="posts_container">
