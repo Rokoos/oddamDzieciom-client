@@ -77,7 +77,7 @@ export const kidSex = [
   'chłopiec'
 ]
 
-export const colors = ['#F012BE', '#FFDC00', '#01FF70','#ff0066'  , '#7FDBFF',  '#ff0000', '#0074D9', '#FF4136', '#3D9970', '#FF851B', '#2ECC40',  '#39CCCC','#ffff33']
+export const colors = ['#F012BE', '#FFDC00', '#01FF70','#ff0066'  , '#7FDBFF',  '#ff0000', '#0074D9', '#FF4136', '#3D9970', '#FF851B', '#2ECC40',  '#39CCCC','#FFDC00']
 
 
 
@@ -115,15 +115,20 @@ export const renderSexName = (sex) => {
 export const termsAndConditions = [
   {
     id: 1,
-    text: 'Jest jeden Jarek'
+    text: 'Wszystkie produkty użytkownik przekazuje za darmo.'
+
   },
   {
     id: 2,
-    text: 'Jest wielu innych Jarków ale tylko ten z punktu nr 1 jest prawdziwy.'
+    text: 'Produkty wystawiane przez użytkownika są nowe, lub w bardzo dobrym stanie.'
   },
   {
     id: 3,
-    text: 'Jarek za dobro wynagradza a za zło karze. '
+    text: 'Żądanie jakiejkolwiek opłaty za produkty skutkuje usunięciem konta użytkownika z serwisu.'
+  },
+  {
+    id: 4,
+    text: 'Użytkownik który stwierdzi łamanie punktów regulaminu serwisu przez innego użytkownika jest zobowiązany powiadomić Admina serwisu.'
   }
 ]
 

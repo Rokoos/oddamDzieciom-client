@@ -58,7 +58,7 @@ const Login = ({history}) => {
       <div className="form-group">
         <input 
         type="email" 
-        placeholder="Enter Your Email"
+        placeholder="Podaj e-mail"
         className="form-control mb-3" 
         value={email} 
         onChange={e => setEmail(e.target.value)}
@@ -68,7 +68,7 @@ const Login = ({history}) => {
       <div className="form-group">
         <input 
           type="password" 
-          placeholder="Enter Password"
+          placeholder="Podaj hasło"
           className="form-control mb-3" 
           value={password} 
           onChange={e => setPassword(e.target.value)}

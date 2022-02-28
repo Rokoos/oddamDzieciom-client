@@ -16,7 +16,7 @@ const MessageModal = ({
   return (
     <Modal 
     className="mt-4 text-center"
-      title={messageSort === 'user2admin' ? 'Powiadom Administratora o naruszeniu regulaminu serwisu' : `Napisz wiadomość do użytkownika ${owner.name}.`}
+      title={messageSort === 'user2admin' ? 'Powiadom Admina o naruszeniu regulaminu serwisu' : `Napisz wiadomość do użytkownika ${owner.name}.`}
       centered
       visible={modalVisible}
       onOk={() => setModalVisible(false)}

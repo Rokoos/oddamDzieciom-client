@@ -25,7 +25,7 @@ const StatuteModal = ({modalVisible, setModalVisible}) => {
       <div className="d-flex flex-column text-left">
         <ol>
         {termsAndConditions.map(term => (
-          <li key={term.id}>{term.text}</li>
+          <li className="pb-2" key={term.id}>{term.text}</li>
         ))}
         </ol>
       </div>
